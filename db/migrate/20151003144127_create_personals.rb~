@@ -17,7 +17,7 @@ class CreatePersonals < ActiveRecord::Migration
       t.string :bloodgroup
       t.string :pan
       t.boolean :married
-      t.date :anniversary_date
+      t.string :anniversary_date
       t.string :interest
 
       t.timestamps null: false
