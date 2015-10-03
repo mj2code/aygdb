@@ -1,0 +1,1 @@
+json.extract! @personal, :id, :aygcode, :name, :dob, :doj, :contact1, :contact2, :email, :r_address, :r_area, :r_city, :r_state, :r_pincode, :profession, :bloodgroup, :pan, :married, :anniversary_date, :interest, :created_at, :updated_at

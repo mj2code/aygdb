@@ -1,0 +1,89 @@
+<%= form_for(@personal) do |f| %>
+  <% if @personal.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@personal.errors.count, "error") %> prohibited this personal from being saved:</h2>
+
+      <ul>
+      <% @personal.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :aygcode %><br>
+    <%= f.text_field :aygcode %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :dob %><br>
+    <%= f.date_select :dob %>
+  </div>
+  <div class="field">
+    <%= f.label :doj %><br>
+    <%= f.date_select :doj %>
+  </div>
+  <div class="field">
+    <%= f.label :contact1 %><br>
+    <%= f.text_field :contact1 %>
+  </div>
+  <div class="field">
+    <%= f.label :contact2 %><br>
+    <%= f.text_field :contact2 %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :r_address %><br>
+    <%= f.text_field :r_address %>
+  </div>
+  <div class="field">
+    <%= f.label :r_area %><br>
+    <%= f.text_field :r_area %>
+  </div>
+  <div class="field">
+    <%= f.label :r_city %><br>
+    <%= f.text_field :r_city %>
+  </div>
+  <div class="field">
+    <%= f.label :r_state %><br>
+    <%= f.text_field :r_state %>
+  </div>
+  <div class="field">
+    <%= f.label :r_pincode %><br>
+    <%= f.number_field :r_pincode %>
+  </div>
+  <div class="field">
+    <%= f.label :profession %><br>
+    <%= f.text_field :profession %>
+  </div>
+  <div class="field">
+    <%= f.label :bloodgroup %><br>
+    <%= f.text_field :bloodgroup %>
+  </div>
+  <div class="field">
+    <%= f.label :pan %><br>
+    <%= f.text_field :pan %>
+  </div>
+  <div class="field">
+    <%= f.label :married %><br>
+    <%= f.check_box :married %>
+  </div>
+  <div class="field">
+    <%= f.label :anniversary_date %><br>
+    <%= f.text_field :anniversary_date %>
+  </div>
+  <div class="field">
+    <%= f.label :interest %><br>
+    <%= f.text_field :interest %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
