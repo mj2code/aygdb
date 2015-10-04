@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Personals aygcode:</strong>
+  <%= @family.personals_aygcode %>
+</p>
+
+<p>
+  <strong>Dad occupation:</strong>
+  <%= @family.dad_occupation %>
+</p>
+
+<p>
+  <strong>Do description:</strong>
+  <%= @family.do_description %>
+</p>
+
+<p>
+  <strong>Brothers:</strong>
+  <%= @family.brothers %>
+</p>
+
+<p>
+  <strong>Sisters:</strong>
+  <%= @family.sisters %>
+</p>
+
+<%= link_to 'Edit', edit_family_path(@family) %> |
+<%= link_to 'Back', families_path %>

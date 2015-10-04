@@ -1,0 +1,3 @@
+class Personal < ActiveRecord::Base
+has_one :academic
+end

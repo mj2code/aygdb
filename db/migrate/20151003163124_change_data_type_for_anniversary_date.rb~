@@ -1,0 +1,12 @@
+class ChangeDataTypeForAnniversaryDate < ActiveRecord::Migration
+  def self.up
+	change_table :personals do |t|
+	t.change :anniversary_date, :string
+  end
+  end
+  def self.down
+	change_table :personals do |t|
+	t.change :anniversary_date, :date
+  end  
+end
+end

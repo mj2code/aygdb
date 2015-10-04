@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Academics</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Personals aygcode</th>
+      <th>Stream</th>
+      <th>Qualification</th>
+      <th>Current edu</th>
+      <th>College</th>
+      <th>Coaching</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @academics.each do |academic| %>
+      <tr>
+        <td><%= academic.personals_aygcode %></td>
+        <td><%= academic.stream %></td>
+        <td><%= academic.qualification %></td>
+        <td><%= academic.current_edu %></td>
+        <td><%= academic.college %></td>
+        <td><%= academic.coaching %></td>
+        <td><%= link_to 'Show', academic %></td>
+        <td><%= link_to 'Edit', edit_academic_path(academic) %></td>
+        <td><%= link_to 'Destroy', academic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Academic', new_academic_path %>

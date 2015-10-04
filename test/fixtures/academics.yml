@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  personals_aygcode: MyString
+  stream: MyString
+  qualification: MyString
+  current_edu: MyString
+  college: MyString
+  coaching: MyString
+
+two:
+  personals_aygcode: MyString
+  stream: MyString
+  qualification: MyString
+  current_edu: MyString
+  college: MyString
+  coaching: MyString

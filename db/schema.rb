@@ -11,10 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151003144127) do
+ActiveRecord::Schema.define(version: 20151004152927) do
 
-  create_table "personals", force: :cascade do |t|
-    t.string   "aygcode"
+  create_table "academics", force: :cascade do |t|
+    t.string   "stream"
+    t.string   "qualification"
+    t.string   "current_edu"
+    t.string   "college"
+    t.string   "coaching"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.integer  "current_edu_year"
+  end
+
+  create_table "families", force: :cascade do |t|
+    t.string   "dad_occupation"
+    t.string   "do_description"
+    t.integer  "brothers"
+    t.integer  "sisters"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  create_table "personals", primary_key: "aygcode", force: :cascade do |t|
     t.string   "name"
     t.date     "dob"
     t.date     "doj"
@@ -30,8 +49,32 @@ ActiveRecord::Schema.define(version: 20151003144127) do
     t.string   "bloodgroup"
     t.string   "pan"
     t.boolean  "married"
-    t.string   "anniversary_date"
+    t.date     "anniversary_date"
     t.string   "interest"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  create_table "professions", force: :cascade do |t|
+    t.string   "prof_name"
+    t.string   "org_name"
+    t.string   "designation"
+    t.string   "salary"
+    t.string   "jobdoj"
+    t.string   "org_station"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "sabhas", force: :cascade do |t|
+    t.string   "groupleader"
+    t.string   "karyakarta"
+    t.string   "reference"
+    t.string   "sub_reference"
+    t.string   "direct_reference"
+    t.boolean  "pooja"
+    t.boolean  "amrish"
+    t.boolean  "kanthi"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
   end

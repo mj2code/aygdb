@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Sabhas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Groupleader</th>
+      <th>Karyakarta</th>
+      <th>Reference</th>
+      <th>Sub reference</th>
+      <th>Direct reference</th>
+      <th>Pooja</th>
+      <th>Amrish</th>
+      <th>Kanthi</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sabhas.each do |sabha| %>
+      <tr>
+        <td><%= sabha.groupleader %></td>
+        <td><%= sabha.karyakarta %></td>
+        <td><%= sabha.reference %></td>
+        <td><%= sabha.sub_reference %></td>
+        <td><%= sabha.direct_reference %></td>
+        <td><%= sabha.pooja %></td>
+        <td><%= sabha.amrish %></td>
+        <td><%= sabha.kanthi %></td>
+        <td><%= link_to 'Show', sabha %></td>
+        <td><%= link_to 'Edit', edit_sabha_path(sabha) %></td>
+        <td><%= link_to 'Destroy', sabha, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sabha', new_sabha_path %>

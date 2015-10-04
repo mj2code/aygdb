@@ -16,71 +16,71 @@
     <%= f.text_field :aygcode %>
   </div>
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label :name %>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :dob %><br>
-    <%= f.date_select :dob %>
+    <%= f.label :dob %>   
+  <%= f.date_select :dob, :start_year=>1970,:end_year=>2015 %>
   </div>
   <div class="field">
-    <%= f.label :doj %><br>
-    <%= f.date_select :doj %>
+    <%= f.label :doj %>
+    <%= f.date_select :doj, :start_year=>1970,:end_year=>2030%>
   </div>
   <div class="field">
-    <%= f.label :contact1 %><br>
+    <%= f.label :contact1 %>
     <%= f.text_field :contact1 %>
   </div>
   <div class="field">
-    <%= f.label :contact2 %><br>
+    <%= f.label :contact2 %>
     <%= f.text_field :contact2 %>
   </div>
   <div class="field">
-    <%= f.label :email %><br>
+    <%= f.label :email %>
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :r_address %><br>
+    <%= f.label :r_address %>
     <%= f.text_field :r_address %>
   </div>
   <div class="field">
-    <%= f.label :r_area %><br>
+    <%= f.label :r_area %>
     <%= f.text_field :r_area %>
   </div>
   <div class="field">
-    <%= f.label :r_city %><br>
+    <%= f.label :r_city %>
     <%= f.text_field :r_city %>
   </div>
   <div class="field">
-    <%= f.label :r_state %><br>
+    <%= f.label :r_state %>
     <%= f.text_field :r_state %>
   </div>
   <div class="field">
-    <%= f.label :r_pincode %><br>
+    <%= f.label :r_pincode %>
     <%= f.number_field :r_pincode %>
   </div>
   <div class="field">
-    <%= f.label :profession %><br>
+    <%= f.label :profession %>
     <%= f.text_field :profession %>
   </div>
   <div class="field">
-    <%= f.label :bloodgroup %><br>
+    <%= f.label :bloodgroup %>
     <%= f.text_field :bloodgroup %>
   </div>
   <div class="field">
-    <%= f.label :pan %><br>
+    <%= f.label :pan %>
     <%= f.text_field :pan %>
   </div>
   <div class="field">
-    <%= f.label :married %><br>
+    <%= f.label :married %>
     <%= f.check_box :married %>
   </div>
   <div class="field">
-    <%= f.label :anniversary_date %><br>
-    <%= f.text_field :anniversary_date %>
+    <%= f.label :anniversary_date %>
+    <%= f.date_select :anniversary_date, :start_year=>1970, :end_year=>2030%>
   </div>
   <div class="field">
-    <%= f.label :interest %><br>
+    <%= f.label :interest %>
     <%= f.text_field :interest %>
   </div>
   <div class="actions">

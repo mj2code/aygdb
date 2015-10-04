@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :professions
+  resources :sabhas
+  resources :families
+  resources :academics
   resources :personals
 root 'personals#index'
   # The priority is based upon order of creation: first created -> highest priority.

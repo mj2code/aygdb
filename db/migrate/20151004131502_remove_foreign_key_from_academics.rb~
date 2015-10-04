@@ -1,0 +1,7 @@
+class RemoveForeignKeyFromAcademics < ActiveRecord::Migration
+  def change
+	remove_reference :academics, :personal_id
+
+remove_index "academics", ["personal_id"], name: "index_academics_on_personal_id"
+  end
+end

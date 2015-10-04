@@ -1,0 +1,11 @@
+class ChangePrimaryKey < ActiveRecord::Migration
+  def change
+
+    change_table :personals do |t|
+	t.change :id , :false
+      	t.change :aygcode, :primary_key, :string
+
+
+  end
+  end
+end

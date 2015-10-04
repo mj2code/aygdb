@@ -1,0 +1,49 @@
+<%= form_for(@sabha) do |f| %>
+  <% if @sabha.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sabha.errors.count, "error") %> prohibited this sabha from being saved:</h2>
+
+      <ul>
+      <% @sabha.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :groupleader %><br>
+    <%= f.text_field :groupleader %>
+  </div>
+  <div class="field">
+    <%= f.label :karyakarta %><br>
+    <%= f.text_field :karyakarta %>
+  </div>
+  <div class="field">
+    <%= f.label :reference %><br>
+    <%= f.text_field :reference %>
+  </div>
+  <div class="field">
+    <%= f.label :sub_reference %><br>
+    <%= f.text_field :sub_reference %>
+  </div>
+  <div class="field">
+    <%= f.label :direct_reference %><br>
+    <%= f.text_field :direct_reference %>
+  </div>
+  <div class="field">
+    <%= f.label :pooja %><br>
+    <%= f.check_box :pooja %>
+  </div>
+  <div class="field">
+    <%= f.label :amrish %><br>
+    <%= f.check_box :amrish %>
+  </div>
+  <div class="field">
+    <%= f.label :kanthi %><br>
+    <%= f.check_box :kanthi %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

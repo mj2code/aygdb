@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Prof name:</strong>
+  <%= @profession.prof_name %>
+</p>
+
+<p>
+  <strong>Org name:</strong>
+  <%= @profession.org_name %>
+</p>
+
+<p>
+  <strong>Designation:</strong>
+  <%= @profession.designation %>
+</p>
+
+<p>
+  <strong>Salary:</strong>
+  <%= @profession.salary %>
+</p>
+
+<p>
+  <strong>Jobdoj:</strong>
+  <%= @profession.jobdoj %>
+</p>
+
+<p>
+  <strong>Org station:</strong>
+  <%= @profession.org_station %>
+</p>
+
+<%= link_to 'Edit', edit_profession_path(@profession) %> |
+<%= link_to 'Back', professions_path %>

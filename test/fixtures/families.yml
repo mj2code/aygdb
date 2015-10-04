@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  personals_aygcode_id: 
+  dad_occupation: MyString
+  do_description: MyString
+  brothers: 1
+  sisters: 1
+
+two:
+  personals_aygcode_id: 
+  dad_occupation: MyString
+  do_description: MyString
+  brothers: 1
+  sisters: 1
