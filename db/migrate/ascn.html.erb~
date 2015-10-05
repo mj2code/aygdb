@@ -1,3 +1,5 @@
+<h2><%= link_to 'Home', personals_path %> </h2>
+
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Personals</h1>
@@ -6,9 +8,9 @@
   <thead>
     <tr>
     
-<th> <%= link_to 'Aygcode', ascn_path %></th>
+<th> <h3><%= link_to 'Aygcode', ascn_path %></h3></th>
 
-      <th>Name</th>
+      <th><h3><%= link_to 'Name', ascname_path %></th>
       <th>Dob</th>
       <th>Doj</th>
       <th>Contact1</th>
@@ -33,7 +35,8 @@
     <% @personals.each do |personal| %>
       <tr>
         <td><%= link_to personal.aygcode, personal_path(personal) %></td>
-        <td><%= personal.name %></td>
+	<td><%= link_to personal.name, personal_path(personal) %></td>
+        
         <td><%= personal.dob %></td>
         <td><%= personal.doj %></td>
         <td><%= personal.contact1 %></td>

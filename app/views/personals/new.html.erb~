@@ -1,4 +1,4 @@
-<h1>New Personal</h1>
+<h1>AYG Database</h1>
 
 <%= render 'form' %>
 

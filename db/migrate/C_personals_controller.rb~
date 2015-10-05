@@ -12,7 +12,7 @@ class PersonalsController < ApplicationController
     @personals = Personal.order("aygcode ASC")
   end
   def ascname
-      @personals = Personal.order("name ASC")
+    
 	render 'index'
   end
   # GET /personals/1

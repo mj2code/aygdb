@@ -1,4 +1,5 @@
 class Personal < ActiveRecord::Base
 has_one :academic
-  self.primary_key = 'aygcode'
+has_one :family
+#  self.primary_key = 'aygcode'
 end

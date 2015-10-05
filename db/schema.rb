@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151004152927) do
+ActiveRecord::Schema.define(version: 20151005060012) do
 
   create_table "academics", force: :cascade do |t|
     t.string   "stream"
@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 20151004152927) do
     t.string   "r_city"
     t.string   "r_state"
     t.integer  "r_pincode"
-    t.string   "profession"
+    t.string   "profesion"
     t.string   "bloodgroup"
     t.string   "pan"
     t.boolean  "married"

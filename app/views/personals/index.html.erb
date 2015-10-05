@@ -1,12 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Personals</h1>
-
+<h2><%= link_to 'Home', personals_path %> </h2>
 <table>
   <thead>
     <tr>
-      <th>Aygcode</th>
-      <th>Name</th>
+    
+<th> <h3><%= link_to 'Aygcode', ascn_path %></h3></th>
+
+      <th><h3><%= link_to 'Name', ascname_path %></th>
       <th>Dob</th>
       <th>Doj</th>
       <th>Contact1</th>
@@ -30,8 +31,9 @@
   <tbody>
     <% @personals.each do |personal| %>
       <tr>
-        <td><%= personal.aygcode %></td>
-        <td><%= personal.name %></td>
+        <td><%= link_to personal.aygcode, personal_path(personal) %></td>
+	<td><%= link_to personal.name, personal_path(personal) %></td>
+        
         <td><%= personal.dob %></td>
         <td><%= personal.doj %></td>
         <td><%= personal.contact1 %></td>
@@ -42,7 +44,7 @@
         <td><%= personal.r_city %></td>
         <td><%= personal.r_state %></td>
         <td><%= personal.r_pincode %></td>
-        <td><%= personal.profession %></td>
+        <td><%= personal.profesion %></td>
         <td><%= personal.bloodgroup %></td>
         <td><%= personal.pan %></td>
         <td><%= personal.married %></td>
@@ -58,4 +60,5 @@
 
 <br><br>
 
-<%= link_to 'New Person', new_personal_path %>
+<h1> <%= link_to 'Add new ', new_personal_path %> </h1>
+

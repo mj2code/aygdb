@@ -60,5 +60,5 @@
 
 <br><br>
 
-<h1> <%= link_to 'Add new ', new_personal_path %> </h1>
+<h1> <%= link_to 'ascn', ascn_path %> </h1>
 
