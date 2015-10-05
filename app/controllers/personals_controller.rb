@@ -38,6 +38,7 @@ class PersonalsController < ApplicationController
     respond_to do |format|
       if @personal.save
         format.html { redirect_to @personal, notice: 'Personal was successfully created.' }
+	flash[:notice]
         format.json { render :show, status: :created, location: @personal }
       else
         format.html { render :new }
@@ -66,7 +67,7 @@ class PersonalsController < ApplicationController
     @personal.destroy
     respond_to do |format|
       format.html { redirect_to personals_url, notice: 'Personal was successfully destroyed.' }
-      format.json { head :no_content }
+     format.json { head :no_content }
     end
   end
 

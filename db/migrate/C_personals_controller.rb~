@@ -12,7 +12,7 @@ class PersonalsController < ApplicationController
     @personals = Personal.order("aygcode ASC")
   end
   def ascname
-    
+      @personals = Personal.order("name ASC")
 	render 'index'
   end
   # GET /personals/1
@@ -38,6 +38,7 @@ class PersonalsController < ApplicationController
     respond_to do |format|
       if @personal.save
         format.html { redirect_to @personal, notice: 'Personal was successfully created.' }
+	flash[:notice]
         format.json { render :show, status: :created, location: @personal }
       else
         format.html { render :new }
@@ -64,10 +65,10 @@ class PersonalsController < ApplicationController
   # DELETE /personals/1.json
   def destroy
     @personal.destroy
-    respond_to do |format|
-      format.html { redirect_to personals_url, notice: 'Personal was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+   # respond_to do |format|
+#      format.html { redirect_to personals_url, notice: 'Personal was successfully destroyed.' }
+  #    format.json { head :no_content }
+ #   end
   end
 
   private

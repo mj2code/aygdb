@@ -8,6 +8,7 @@ get 'personals/ascname/*'=> 'personals#ascname', as: 'ascname'
   resources :personals
 
 
+get 'google' => redirect('http://www.google.com')
 
 root 'personals#index' 
   # The priority is based upon order of creation: first created -> highest priority.

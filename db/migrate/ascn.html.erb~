@@ -2,8 +2,6 @@
 
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Personals</h1>
-
 <table>
   <thead>
     <tr>
