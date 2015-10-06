@@ -2,7 +2,7 @@
 
 <p>
   <strong>Personals aygcode:</strong>
- 
+  <%= @academic.personals_aygcode %>
 </p>
 
 <p>

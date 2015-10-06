@@ -1,3 +1,6 @@
+
+<h2><%= link_to 'Home', personals_path %> </h2>
+
 <%= form_for(@personal) do |f| %>
   <% if @personal.errors.any? %>
     <div id="error_explanation">
@@ -61,7 +64,7 @@
   </div>
   <div class="field">
     <%= f.label :profession %>
-    <%= f.text_field :profession %>
+    <%= f.text_field :profesion %>
   </div>
   <div class="field">
     <%= f.label :bloodgroup %>
@@ -84,6 +87,7 @@
     <%= f.text_field :interest %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+	<%= f.submit 'save' %>
+    <%= link_to f.submit , new_academic_path  %>
   </div>
 <% end %>

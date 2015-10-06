@@ -87,6 +87,7 @@
     <%= f.text_field :interest %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+	<%= f.submit 'save' %>
+    <%= link_to f.submit , new_academic_path  %>
   </div>
 <% end %>

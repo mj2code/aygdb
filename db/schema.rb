@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151005060012) do
+ActiveRecord::Schema.define(version: 20151005152317) do
 
   create_table "academics", force: :cascade do |t|
     t.string   "stream"
@@ -22,7 +22,10 @@ ActiveRecord::Schema.define(version: 20151005060012) do
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
     t.integer  "current_edu_year"
+    t.integer  "personals_id"
   end
+
+  add_index "academics", ["personals_id"], name: "index_academics_on_personals_id"
 
   create_table "families", force: :cascade do |t|
     t.string   "dad_occupation"

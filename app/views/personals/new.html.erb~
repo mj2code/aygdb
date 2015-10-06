@@ -1,5 +1,4 @@
-<h1>AYG Database</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Back', personals_path %>
+<%= link_to 'Add educational details', new_academics_path %>

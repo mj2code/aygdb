@@ -1,5 +1,6 @@
 
 <h2><%= link_to 'Home', personals_path %> </h2>
+
 <%= form_for(@personal) do |f| %>
   <% if @personal.errors.any? %>
     <div id="error_explanation">
@@ -86,6 +87,7 @@
     <%= f.text_field :interest %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+	<% f.submit %>
+    <%= link_to 'Add educal details', new_academic_path  %>
   </div>
 <% end %>
