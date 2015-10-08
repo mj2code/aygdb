@@ -1,10 +1,23 @@
 
-<h2><%= link_to 'Home', personals_path %> </h2>
+<h2><%= link_to 'Home', personals_path %></h2><br>
+
+
+
+
+<%= button_to 'New', new_academic_path, :method => :get%>
+
+  
+
+
+
+
+
 
 <%= form_for(@personal) do |f| %>
   <% if @personal.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@personal.errors.count, "error") %> prohibited this personal from being saved:</h2>
+
 
       <ul>
       <% @personal.errors.full_messages.each do |message| %>
@@ -60,7 +73,7 @@
   </div>
   <div class="field">
     <%= f.label :r_pincode %>
-    <%= f.number_field :r_pincode %>
+    <%= f.number_field :r_pincode, :size => 6%>
   </div>
   <div class="field">
     <%= f.label :profession %>
@@ -87,7 +100,7 @@
     <%= f.text_field :interest %>
   </div>
   <div class="actions">
-	<%= f.submit 'save' %>
-    <%= link_to f.submit , new_academic_path  %>
+	<%= f.submit :name=>'new_academic_path' %>
+    <% button_to "new", controller: "academics", action: "new" %>
   </div>
 <% end %>

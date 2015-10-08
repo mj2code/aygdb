@@ -16,7 +16,7 @@ end
 def indexx
   @personals = Personal.all
   if params[:xsearch]
-    @personals = Personal.xsearch(params[:xsearch]).order("aygcode ASC")
+    @personals = Personal.search(params[:xsearch]).order("aygcode ASC")
   else
     @personals = Personal.all.order('aygcode ASC')
   end

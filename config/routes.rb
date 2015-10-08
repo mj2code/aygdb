@@ -1,11 +1,27 @@
 Rails.application.routes.draw do
 get 'personals/ascn/*'=> 'personals#ascn', as: 'ascn'
 get 'personals/ascname/*'=> 'personals#ascname', as: 'ascname'
-  resources :professions
-  resources :sabhas
-  resources :families
-  resources :academics
-  resources :personals
+get 'peronals/indexx' => 'personals#indexx', as: 'indexx'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  resources :professions, :sabhas, :families, :academics, :personals
 
 
 get 'google' => redirect('http://www.google.com')

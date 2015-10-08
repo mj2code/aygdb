@@ -22,7 +22,7 @@ def self.xsearch(searc)
   searc=searc.to_s
   where("aygcode.to_s LIKE ?", "%#{searc}%") 
   where("married LIKE ?", "%#{searc}%")
-
+ where("doj LIKE ?", "%#{searc}%")
 
 end
 

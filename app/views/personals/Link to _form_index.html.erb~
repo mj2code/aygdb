@@ -1,10 +1,7 @@
 
-<%= form_tag(indexx_path, :method => "get", id: "search-form") do %>
-
-<%= text_field_tag :xsearch, params[:searc], placeholder: "Search by name and aygcode " %>
-
+<%= form_tag(personals_path, :method => "get", id: "search-form") do %>
+<%= text_field_tag :search, params[:search], placeholder: "Search by name and aygcode " %>
 <%= submit_tag "Search" %>
-
 <% end %>
 
 
